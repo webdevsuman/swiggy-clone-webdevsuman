@@ -6,6 +6,7 @@ import restaurantRouter from "./restaurant.routes.js";
 import foodRouter from "./food.routes.js";
 import cartRouter from "./cart.routes.js";
 import orderRouter from "./order.routes.js";
+import adminRouter from "./admin.routes.js";
 
 const apiRouter = Router();
 
@@ -25,5 +26,6 @@ apiRouter.use("/restaurants", restaurantRouter);
 apiRouter.use("/foods", foodRouter);
 apiRouter.use("/cart", cartRouter);
 apiRouter.use("/orders", orderRouter);
+apiRouter.use("/admin", adminRouter);
 
 export default apiRouter;
