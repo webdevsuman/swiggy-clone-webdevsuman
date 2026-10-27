@@ -1,6 +1,8 @@
 import { Router } from "express";
 import httpStatusCodes from "../utils/httpStatusCodes.js";
 import authRouter from "./auth.routes.js";
+import categoryRouter from "./category.routes.js";
+import restaurantRouter from "./restaurant.routes.js";
 
 const apiRouter = Router();
 
@@ -14,5 +16,8 @@ apiRouter.get("/health", (_req, res) => {
 });
 
 apiRouter.use("/auth", authRouter);
+
+apiRouter.use("/categories", categoryRouter);
+apiRouter.use("/restaurants", restaurantRouter);
 
 export default apiRouter;
